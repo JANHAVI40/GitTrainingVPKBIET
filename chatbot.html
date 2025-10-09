@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Easy Chatbot</title>
+</head>
+<body>
+
+<h2>Chatbot</h2>
+
+<input id="input" placeholder="Type here">
+<button onclick="chat()">Send</button>
+
+<p id="reply"></p>
+
+<script>
+function chat() {
+  var text = document.getElementById("input").value.toLowerCase();
+  var answer = "";
+
+  if(text == "hello") answer = "Hi!";
+  else if(text == "how are you") answer = "I'm good!";
+  else if(text == "bye") answer = "Goodbye!";
+  else answer = "I don't understand.";
+
+  document.getElementById("reply").innerText = answer;
+  document.getElementById("input").value = "";
+}
+</script>
+
+</body>
+</html>
